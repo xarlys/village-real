@@ -24,8 +24,8 @@ function Index({ description, meta, title }) {
 }
 
 Index.defaultProps = {
-  meta: [],
-  description: ``,
+  meta: ['residencial', 'condominio', 'village real', 'village', 'alto padrão', 'tranquilidade', 'natureza'],
+  description: `Residencial Village Real, um condomínio de alto padrão inspirado na tranquilidade da natureza e do verde, o GRUPO ALFA IMÓVEIS CONSTRUÇÕES projetou para Manhuaçu e Simonésia um lugar para integrar a atmosfera de sua casa.`,
 };
 
 Index.propTypes = {

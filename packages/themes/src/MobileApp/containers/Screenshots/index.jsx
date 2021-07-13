@@ -179,16 +179,18 @@ Screenshots.defaultProps = {
     mb: -60,
     // top: -0,
     //left: 335,
-    ml: 220,
+    ml: 420,
   },
   ImgPropsMapa: {
     src: FotoMapa,
     srcSet: `${FotoMapa} 1x, ${FotoMapa} 2x`,
     alt: 'Mapa do Loteamento',
-    width: '80%',
-    height: '510px',
-    borderRadius: '120px',
-    alignItens: 'center'
+    width: '60%',
+    height: '80%',
+    borderRadius: '60px',
+    alignItens: 'center',
+    //maxWidth:'80%',
+
   },
 
 };

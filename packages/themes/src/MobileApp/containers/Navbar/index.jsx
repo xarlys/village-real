@@ -233,7 +233,7 @@ Navbar.defaultProps = {
     buttonWidth: 24,
     position: 'absolute',
     right: 3,
-    color: 'gray.0',
+    color: 'gray.7',
     display: {
       lg: 'none',
     },

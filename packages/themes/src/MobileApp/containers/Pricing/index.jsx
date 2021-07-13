@@ -404,7 +404,8 @@ Pricing.defaultProps = {
     variant: 'h4',
   },
   CardPriceProps: {
-    fontSize: 96,
+    //-fontSize: 96,
+    fontSize: 66,
     fontWeight: 600,
     textAlign: 'center',
     letterSpacing: '-0.03em',
