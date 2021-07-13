@@ -310,7 +310,7 @@ Landing1.propTypes = {
 };
 
 Landing1.defaultProps = {
-  url: 'https://pager.land/next/',
+  url: 'https://condominiovillagereal.com.br',
 };
 
 export default Landing1;
