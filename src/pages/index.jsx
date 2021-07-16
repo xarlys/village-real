@@ -57,7 +57,7 @@ const Landing1 = ({ url }) => (
           },
           {
             to: 'clients',
-            label: 'Prova Social',
+            label: 'Nossos Clientes',
           },
           {
             to: 'pricing',

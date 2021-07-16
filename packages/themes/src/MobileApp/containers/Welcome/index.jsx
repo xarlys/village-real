@@ -37,8 +37,8 @@ const Welcome = ({
     <Container {...ContainerProps} name={name}>
       <Box {...CaptionProps}>
         <Fade bottom cascade duration={600}>
-          <Typography {...TitleProps} mb={4} style={{fontSize: 64}}>{title}</Typography>
-          <Typography {...TextProps}>{text}</Typography>
+          <Typography {...TitleProps} mb={0}>{title}</Typography>
+          <Typography {...TextProps} style={{fontSize: 18, textAlign: 'justify'}}>{text}</Typography>
         </Fade>
         <Box flexBox mt={4}>
           <Fade left duration={600} delay={100} distance="30px">
@@ -53,7 +53,7 @@ const Welcome = ({
       <Box {...ImagesWrapperProps}>
         <Images {...ImagesProps}>
           <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
-            <LiquidComponent {...LiquidProps} /> 
+            {/* <LiquidComponent {...LiquidProps} />  */}
             <PhoneImg {...PhoneImgProps} />
           </Reveal>
         </Images>
@@ -158,21 +158,21 @@ Welcome.defaultProps = {
     flexBox: true,
     flexDirection: 'column',
     justifyContent: 'center',
-    pt: 3,
+    pt: 2,
     pb: {
-      _: 3,
-      lg: 5,
+      _: 2,
+      lg: 3,
     },
     flex: {
       _: '0 0 1',
-      lg: `0 0 470px`,
+      lg: `0 0 520px`,
     },
     height: '100%',
   },
   TitleProps: {
     as: 'h2',
     variant: 'h1',
-    mb: 4,
+    mb: 0,
     fontSize: '48px',
   },
   TextProps: {

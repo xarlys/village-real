@@ -198,7 +198,7 @@ Navbar.defaultProps = {
   LinkProps: {
     mx: {
       _: 0,
-      lg: 3,
+      lg: 2,
     },
     my: {
       _: 3,

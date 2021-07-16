@@ -13,15 +13,15 @@ import {
 
 const Avatar = ({ fancy, className, src, srcSet, ImgProps, ...props }) => (
   <Wrapper className={classNames(className, { fancy })} {...props}>
-    {fancy && (
+    {/* {fancy && (
       <>
         <DashedCircle />
         <FullCircle />
         <CrossTertiary />
         <CrossQuaternary />
       </>
-    )}
-    <Image src={src} srcSet={src} {...ImgProps} />
+    )} */}
+    <Image src={src} srcSet={src} {...ImgProps} style={{backgroundColor: '#152144', color: '#152144'}} />
   </Wrapper>
 );
 

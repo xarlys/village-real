@@ -33,8 +33,8 @@ const Newsletter = ({
   <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
     <Box {...WrapperProps} name={name}>
       <Container {...ContainerProps}>
-        <LiquidComponent {...LiquidProps} />
-        <Card {...CardProps}>
+         <LiquidComponent {...LiquidProps} /> 
+        <Card {...CardProps} >
           <Fade bottom cascade duration={600}>
             <Typography {...TitleProps}>{title}</Typography>
             <Typography {...TextProps}>{text}</Typography>

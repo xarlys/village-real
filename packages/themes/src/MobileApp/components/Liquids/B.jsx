@@ -222,7 +222,7 @@ const B = ({ ...props }) => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#FEBB75" />
-          <stop offset={1} stopColor="#FE8E75" />
+          <stop offset={1} stopColor="#FEBB75" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint1_linear`}
@@ -233,7 +233,7 @@ const B = ({ ...props }) => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#FEBB75" />
-          <stop offset={1} stopColor="#FE8E75" />
+          <stop offset={1} stopColor="#FEBB75" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint2_linear`}
@@ -243,8 +243,8 @@ const B = ({ ...props }) => {
           y2="451.202"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FB948F" />
-          <stop offset={1} stopColor="#DC2789" />
+          <stop stopColor="#152144" />
+          <stop offset={1} stopColor="#b27138" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint3_linear`}
@@ -254,8 +254,8 @@ const B = ({ ...props }) => {
           y2="267.179"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#C36B84" />
-          <stop offset={1} stopColor="#8735AE" />
+          <stop stopColor="#b27138" />
+          <stop offset={1} stopColor="#152144" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint4_linear`}
@@ -265,8 +265,8 @@ const B = ({ ...props }) => {
           y2="428.079"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#C36B84" />
-          <stop offset={1} stopColor="#8735AE" />
+          <stop stopColor="#b27138" />
+          <stop offset={1} stopColor="#152144" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint5_linear`}
@@ -276,8 +276,8 @@ const B = ({ ...props }) => {
           y2="232.123"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#C36B84" />
-          <stop offset={1} stopColor="#8735AE" />
+          <stop stopColor="#b27138" />
+          <stop offset={1} stopColor="#152144" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint6_linear`}
@@ -287,8 +287,8 @@ const B = ({ ...props }) => {
           y2="238.813"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#C36B84" />
-          <stop offset={1} stopColor="#8735AE" />
+          <stop stopColor="#b27138" />
+          <stop offset={1} stopColor="#152144" />
         </linearGradient>
         <linearGradient
           id={`${shortId.current}_paint7_linear`}
@@ -298,8 +298,8 @@ const B = ({ ...props }) => {
           y2="166.092"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#C36B84" />
-          <stop offset={1} stopColor="#8735AE" />
+          <stop stopColor="#b27138" />
+          <stop offset={1} stopColor="#152144" />
         </linearGradient>
         <clipPath id="clip0">
           <rect width="614" height="500" transform="matrix(-1 0 0 1 614 0)" fill="white" />

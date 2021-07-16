@@ -66,7 +66,7 @@ export default {
       },
       {
         to: 'clients',
-        label: 'Prova Social',
+        label: 'Nossos Clientes',
       },
       {
         to: 'support',
@@ -90,7 +90,9 @@ export default {
   },
   welcome: {
     title: textToMultiline(`VILLAGE REAL \n\n`),
-    text: `Um Condomínio de Alto Padrão. Inspirado na tranquilidade da natureza e do verde, o GRUPO ALFA IMÓVEIS CONSTRUÇÕES projetou para Manhuaçu e Simonésia.`,
+    text: textToMultiline(`Inspirado na tranquilidade da natureza  e do verde, o GRUPO ALFA IMÓVEIS   CONSTRUÇÕES projetou para  Manhuaçu e Simonésia um lugar para integrar a atmosfera de sua casa, com um ambiente incrível, conectado às suas emoções e à sua memória.
+    Celebre a sua exclusividade! Imagine uma vida onde você acorda todos os dias com uma vista linda, um clima ameno, e esse sentimento de conquista, de realização num condomínio que une a alma da cidade com o clima do campo. Perceba que não há fronteiras para os sonhos, nem limites para a imaginação. 
+    Festeje a vida! Conquiste seu Village! O Condomínio de Alto Padrão com o melhor custo benefício por metro quadrado da região`),
   },
   footer: {
     section1: {
@@ -120,8 +122,8 @@ export default {
     },
   },
   about: {
-    title: 'Mais Sobre o Village Real?',
-    text: `O Village Real é um condomínio de alto padrão, seu paraíso particular. Inspirado na tranquilidade da natureza e do verde, o GRUPO ALFA IMÓVEIS CONSTRUÇÕES projetou para Manhuaçu e Simonésia um lugar para integrar a atmosfera de sua casa, com um ambiente incrível, conectado às suas emoções e à sua memória.`,
+    title: 'Mais sobre o Village Real',
+    text: textToMultiline(`O Village Real é um condomínio de alto padrão, seu paraíso particular. Inspirado na tranquilidade da natureza e do verde, o GRUPO ALFA IMÓVEIS CONSTRUÇÕES projetou para Manhuaçu e Simonésia um lugar para integrar a atmosfera de sua casa, com um ambiente incrível, conectado às suas emoções e à sua memória.`),
     features: [
       {
         id: 'feature1',
@@ -316,9 +318,10 @@ export default {
     },
   ],
   screenshots: {
-    title: 'Imagens do Residencial',
+    //title: 'Imagens do Residencial',
+    //title: 'SEU PARAÍSO PARTICULAR',
     text:
-      'SEU PARAÍSO PARTICULAR, UM CONDOMÍNIO DE ALTO PADRÃO',
+       'SEU PARAÍSO PARTICULAR, UM CONDOMÍNIO DE ALTO PADRÃO',
     images: [
       {
         src: Phone1,
@@ -348,8 +351,8 @@ export default {
     ],
   },
   clients: {
-    title: 'Prova Social',
-    text: 'O que os clientes falam sobre nós?',
+    title: 'Nossos Clientes Falam Por Nós',
+    //text: 'O que os clientes falam sobre nós',
     comments: [
       {
         author: 'Ludmila Soares Cruz',
