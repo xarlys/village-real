@@ -375,6 +375,11 @@ export default {
     //    'SEU PARAÍSO PARTICULAR, UM CONDOMÍNIO DE ALTO PADRÃO',
     images: [
       {
+        src: Loteamento9,
+        srcSet: `${Loteamento9} 1x, ${Loteamento9x2} 2x`,
+        alt: 'Interior 9',
+      },
+      {
         src: Loteamento,
         srcSet: `${Loteamento} 1x, ${Loteamentox2} 2x`,
         alt: 'Interior 1',
@@ -414,11 +419,7 @@ export default {
         srcSet: `${Loteamento8} 1x, ${Loteamento8x2} 2x`,
         alt: 'Interior 8',
       },  
-      {
-        src: Loteamento9,
-        srcSet: `${Loteamento9} 1x, ${Loteamento9x2} 2x`,
-        alt: 'Interior 9',
-      },      
+           
     ],
   },
   clients: {
