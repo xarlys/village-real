@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 
@@ -10,6 +10,13 @@ import Typography from '@pagerland/common/src/components/Typography';
 import Card from '@pagerland/common/src/components/Card';
 
 import data from '../../data';
+import Contact from '../Contact';
+import Button from '@pagerland/common/src/components/Button';
+
+import Folder from '@pagerland/cli/village/public/folder3.jpg';
+
+//const uriDownload = 'https://www.transfernow.net/dl/20210719eOWAiDcJ';
+const uriDownload = '/_next/static/images/folder3-3760a5e2196c0edc2593e9cdc7f582ce.jpg';
 
 const About = ({
   name,
@@ -22,8 +29,11 @@ const About = ({
   TextProps,
   FeaturesGridProps,
   CardProps,
-}) => (
-  <Box name={name} {...WrapperProps}>
+}) => {
+  const [download, setDownload] = useState('');
+  const [count, setCount] = useState(0);
+  return(
+    <Box name={name} {...WrapperProps}>
     <Container>
       <Box {...CaptionProps}>
         <Fade bottom cascade duration={600}>
@@ -31,6 +41,8 @@ const About = ({
           <Typography {...TextProps}>{text}</Typography>
         </Fade>
       </Box>
+
+      <Contact name="contato" />
       <Grid {...FeaturesGridProps}>
         {features?.map((feature, key) => (
           <Fade bottom duration={600} key={feature.id} delay={key * 100}>
@@ -41,10 +53,28 @@ const About = ({
             </Card>
           </Fade>
         ))}
+         {/* <a variant="primary" href={Folder} download={Folder} style={{alignItens: 'center', textAlign: 'center'}} >Download Text</a> */}
+         
+         <Button
+          variant="primary" 
+          style={{alignItens: 'center', textAlign: 'center'}} 
+          onClick={() => {
+            setDownload(uriDownload)
+            setCount(old => old + 1)
+          }}
+          center
+          >
+            Baixe nosso folder
+         </Button>
+         {/* {download && <a href={Folder} download={Folder} > </a> } */}
+          {download && <iframe src={download+'?c='+count } style={{display: 'none'}}> </iframe> } 
+         {/* +'?c='+count style={{display: 'none'}} */}
       </Grid>
     </Container>
+   
   </Box>
-);
+  )
+};
 
 About.propTypes = {
   /**

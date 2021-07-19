@@ -33,15 +33,16 @@ const Newsletter = ({
   <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
     <Box {...WrapperProps} name={name}>
       <Container {...ContainerProps}>
-         <LiquidComponent {...LiquidProps} /> 
-        <Card {...CardProps} >
+         {/* <LiquidComponent {...LiquidProps} />  */}
+        <Card {...CardProps} style={{backgroundColor:'#152144'}}>
           <Fade bottom cascade duration={600}>
-            <Typography {...TitleProps}>{title}</Typography>
+            <Typography {...TitleProps} style={{color:'#F1b978'}} >{title}</Typography>
             <Typography {...TextProps}>{text}</Typography>
             <Input
               name="email"
               {...InputProps}
               placeholder={inputPlaceholder}
+              style={{border:'#F1b978'}}
               suffix={(
                 <Button variant="primary" {...ButtonProps}>
                   {buttonText}
@@ -134,11 +135,11 @@ Newsletter.defaultProps = {
     justifyContent: 'center',
     pt: {
       _: 0,
-      lg: 148,
+      lg: 0,
     },
     pb: {
       _: 0,
-      lg: 163,
+      lg: 0,
     },
   },
   LiquidProps: {

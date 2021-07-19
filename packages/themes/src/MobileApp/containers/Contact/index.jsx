@@ -1,87 +1,73 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
-
-import { Formik, Form } from 'formik';
 
 import Box from '@pagerland/common/src/components/Box';
 import Container from '@pagerland/common/src/components/Container';
 import Typography from '@pagerland/common/src/components/Typography';
-import Button from '@pagerland/common/src/components/Button';
-import Input from '@pagerland/common/src/components/Formik/Input';
 
-import Liquid from '../../components/Liquids/A';
+import { Img, ImgSlider, MapaImg } from './styled.components';
 
-import phoneImg from '../../assets/contact-phone.png';
-import phoneImg2x from '../../assets/contact-phone@2x.png';
+import FotoMapa from '../../assets/mapa.png';
 
-import { PhoneImg } from './styled.components';
+
+
 import data from '../../data';
 
 const Contact = ({
+  WrapperProps,
+  CaptionProps,
+  TitleProps,
+  SliderProps,
+  TextProps,
+  ImgProps,
+  ImgPropsMapa,
   name,
   title,
   text,
-  sendButtonText,
-  form,
-  WrapperProps,
-  ContainerProps,
-  InnerProps,
+  images,
   ImgWrapperProps,
-  ImgProps,
-  LiquidProps,
-  FormProps,
-  TitleProps,
-  TextProps,
-  ButtonProps,
-}) => (
-  <Box {...WrapperProps}>
-    <Container name={name} {...ContainerProps}>
-      <Box {...InnerProps}>
-        <Box {...ImgWrapperProps}>
-          <Fade duration={600} delay={100}>
-            <PhoneImg alt="" {...ImgProps} />
+}) => {
+
+  return(
+    <>
+  
+    <Box {...WrapperProps} name={name}>
+      <Container>
+        <Box {...CaptionProps}>
+          <Fade cascade bottom duration={600}>
+            <Typography {...TitleProps}>{title}</Typography>
+            <Typography {...TextProps}>{text}</Typography>
+  
+            
           </Fade>
         </Box>
-        <Box {...LiquidProps}>
-          <Reveal ssrReveal ssrFadeout effect="liquid" duration={600}>
-            <Liquid width={570} />
-          </Reveal>
-        </Box>
-        <Box {...FormProps}>
-          <Formik
-            validationSchema={form.validationSchema}
-            onSubmit={form.onSubmit}
-            initialValues={form.fields.reduce(
-              (acc, field) => ({
-                ...acc,
-                [field.name]: field.initialValue,
-              }),
-              {},
-            )}
-          >
-            <Form>
-              <Fade cascade bottom duration={600}>
-                <Typography {...TitleProps}>{title}</Typography>
-                <Typography {...TextProps}>{text}</Typography>
-                <div>
-                  {form.fields.map(field => (
-                    <Input key={field.name} {...field} />
-                  ))}
-                  <Button type="submit" {...ButtonProps}>
-                    {sendButtonText}
-                  </Button>
-                </div>
-              </Fade>
-            </Form>
-          </Formik>
-        </Box>
-      </Box>
-    </Container>
-  </Box>
-);
+        
+      </Container>
+        
+      <Fade duration={600}>
+        <ImgSlider {...SliderProps} 
+          autoPlaySpeed={5000}
+          autoPlay
+        >
+          {slider => {
+            return images.map((img, key) => (
+              //console.log(img),
+              <Img {...ImgProps} key={key} onClick={() => slider.current.slickGoTo(key)} {...img} />
+            ));
+          }}
+        </ImgSlider>  
+          
+      </Fade>
+      {/* <Box {...ImgWrapperProps}>
+        <Fade duration={600} delay={100} style={{ textAlign: 'center', alignItems:'center', alignContent:'center'}}>
+          <MapaImg style={{textAlign: 'center', alignItems:'center', alignContent:'center'}} alt="Mapa do Loteamento" {...ImgPropsMapa} />
+        </Fade>
+      </Box>  */}
+    </Box>
+    </>
+  );
+}
 
 Contact.propTypes = {
   /**
@@ -89,173 +75,130 @@ Contact.propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   * Title text
-   */
-  title: PropTypes.node,
-  /**
-   * Main content text
-   */
-  text: PropTypes.node,
-  /**
-   * Send button content
-   */
-  sendButtonText: PropTypes.node,
-  /**
-   * Form details
-   */
-  form: PropTypes.shape({
-    /**
-     * Formik validation schema
-     * @see https://jaredpalmer.com/formik/docs/guides/validation
-     */
-    validationSchema: PropTypes.object,
-    /**
-     * Form submit function
-     */
-    onSubmit: PropTypes.func,
-    /**
-     * List of fields
-     */
-    fields: PropTypes.arrayOf(
-      PropTypes.shape({
-        /**
-         * Name of field
-         */
-        name: PropTypes.string.isRequired,
-        /**
-         * Type of field
-         */
-        type: PropTypes.string,
-        /**
-         * Placeholder for field
-         */
-        placeholder: PropTypes.string,
-        /**
-         * Initial value used in formik
-         */
-        initialValue: PropTypes.string,
-      }),
-    ),
-  }),
-  /**
-   * Main wrapper props
+   * Wrapper props
    * @See @pagerland/common/src/components/Box
    */
   WrapperProps: PropTypes.object,
   /**
-   * Container props
-   * @See @pagerland/common/src/components/Container
-   */
-  ContainerProps: PropTypes.object,
-  /**
-   * Inner box props
+   * Caption props
    * @See @pagerland/common/src/components/Box
    */
-  InnerProps: PropTypes.object,
+  CaptionProps: PropTypes.object,
   /**
-   * Props list for phone image wrapper
-   * @See @pagerland/common/src/components/Box
+   * Props of slider component
+   * @See @pagerland/common/src/components/Slider
    */
-  ImgWrapperProps: PropTypes.object,
-  /**
-   * Phone image props
-   * @See @pagerland/common/src/components/Img
-   */
-  ImgProps: PropTypes.object,
-  /**
-   * Object with props for Liquid component.
-   */
-  LiquidProps: PropTypes.object,
-  /**
-   * Form wrapper props
-   * @See @pagerland/common/src/components/Box
-   */
-  FormProps: PropTypes.object,
+  SliderProps: PropTypes.object,
   /**
    * Title text props
    * @See @pagerland/common/src/components/Typography
    */
   TitleProps: PropTypes.object,
   /**
-   * Main content text props
+   * Main text props
    * @See @pagerland/common/src/components/Typography
    */
   TextProps: PropTypes.object,
   /**
-   * Send button props
-   * @See @pagerland/common/src/components/Button
+   * Single image / slide props
+   * @See @pagerland/common/src/components/Img
    */
-  ButtonProps: PropTypes.object,
+  ImgProps: PropTypes.object,
+  /**
+   * Title node of component
+   */
+  ImgPropsMapa: PropTypes.object,
+  /**
+   * Title node of component
+   */
+  title: PropTypes.node,
+  /**
+   * Main description
+   */
+  text: PropTypes.node,
+  /**
+   * List of images used for slides
+   */
+  images: PropTypes.array,
+  /**
+   * Props list for phone image wrapper
+   * @See @pagerland/common/src/components/Box
+   */
+  ImgWrapperProps: PropTypes.object,
 };
 
 Contact.defaultProps = {
   WrapperProps: {
-    overflow: 'hidden',
-    mt: -60,
-    pt: 60,
+    py: {
+      _: 30,
+      lg: 0,
+    },
   },
-  InnerProps: {
-    flexBox: true,
-    pt: {
-      _: 60,
-      lg: 120,
+  CaptionProps: {
+    textAlign: {
+      _: 'left',
+      lg: 'center',
     },
-    pb: {
-      _: 90,
-      lg: 180,
-    },
-    ml: {
-      _: 0,
-      lg: 700,
-    },
-    position: 'relative',
-  },
-  FormProps: {
-    flex: {
-      _: '1',
-      lg: '0 0 370px',
-    },
+    mb: 0,
+    maxWidth: 770,
+    mx: 'auto',
   },
   TitleProps: {
     as: 'h2',
-    variant: 'h2',
+    variant: 'h1',
     mb: {
       _: 3,
       lg: 4,
     },
   },
   TextProps: {
+    variant: 'body1',
     color: 'gray.1',
-    mb: {
-      _: 3,
-      lg: 4,
-    },
   },
-  ButtonProps: {
-    variant: 'primary',
-    mt: {
-      _: 3,
-      lg: 4,
+  SliderProps: {
+    options: {
+      dots: true,
+      speed: 500,
+      slidesToShow: 1,
+      centerMode: true,
+      variableWidth: true,
+      arrows: false,
+      slidesToScroll: 1,
+      play: true,
+      autoPlay: true,
     },
-  },
-  ImgWrapperProps: {
-    position: 'absolute',
-    top: -60,
-    left: -860,
-    zIndex: -1,
   },
   ImgProps: {
-    src: phoneImg,
-    srcSet: `${phoneImg} 1x, ${phoneImg2x} 2x`,
-    alt: 'Contact us',
+    width: {
+      _: '480px !important',
+      lg: '780px !important',
+    },
+    mb: 40,
+    mx: -20,
+    borderRadius: 68,
   },
-  LiquidProps: {
-    top: 140,
-    zIndex: -2,
-    left: -600,
-    position: 'absolute',
+  ...data.imagemLoteamento,
+  ImgWrapperProps: {
+    position: 'relative',
+    zIndex: -1,
+    mt: 10,
+    mb: -60,
+    // top: -0,
+    //left: 335,
+    ml: 420,
   },
-  ...data.contact,
+  ImgPropsMapa: {
+    src: FotoMapa,
+    srcSet: `${FotoMapa} 1x, ${FotoMapa} 2x`,
+    alt: 'Mapa do Loteamento',
+    width: '60%',
+    height: '80%',
+    borderRadius: '60px',
+    alignItens: 'center',
+    //maxWidth:'80%',
+
+  },
+
 };
 
 export default Contact;

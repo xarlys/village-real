@@ -39,6 +39,23 @@ import Phone5x2 from './assets/loteamento/mapas-local/foto2.png';
 // import Phone6 from './assets/screenshots/Phone-6.png';
 // import Phone6x2 from './assets/screenshots/Phone-6@2x.png';
 
+import Loteamento from './assets/loteamento/interior/FOTO-1.png';
+import Loteamentox2 from './assets/loteamento/interior/FOTO-1.png';
+import Loteamento2 from './assets/loteamento/interior/FOTO-2.png';
+import Loteamento2x2 from './assets/loteamento/interior/FOTO-2.png';
+import Loteamento3 from './assets/loteamento/interior/FOTO-3.png';
+import Loteamento3x2 from './assets/loteamento/interior/FOTO-3.png';
+import Loteamento4 from './assets/loteamento/interior/FOTO-4.png';
+import Loteamento4x2 from './assets/loteamento/interior/FOTO-4.png';
+import Loteamento5 from './assets/loteamento/interior/FOTO-5.png';
+import Loteamento5x2 from './assets/loteamento/interior/FOTO-5.png';
+import Loteamento6 from './assets/loteamento/interior/FOTO-6.png';
+import Loteamento6x2 from './assets/loteamento/interior/FOTO-6.png';
+import Loteamento7 from './assets/loteamento/interior/FOTO-7.png';
+import Loteamento7x2 from './assets/loteamento/interior/FOTO-7.png';
+import Loteamento8 from './assets/loteamento/interior/FOTO-8.png';
+import Loteamento8x2 from './assets/loteamento/interior/FOTO-8.png';
+
 import male from './assets/clients/photo-male.jpg';
 import malex2 from './assets/clients/photo-male@2x.jpg';
 import female from './assets/clients/photo-female.jpg';
@@ -350,8 +367,55 @@ export default {
       },      
     ],
   },
+  imagemLoteamento: {
+    //title: `Área de Lazer`,
+    // text:
+    //    'SEU PARAÍSO PARTICULAR, UM CONDOMÍNIO DE ALTO PADRÃO',
+    images: [
+      {
+        src: Loteamento,
+        srcSet: `${Loteamento} 1x, ${Loteamentox2} 2x`,
+        alt: 'Interior 1',
+      },
+      {
+        src: Loteamento2,
+        srcSet: `${Loteamento2} 1x, ${Loteamento2x2} 2x`,
+        alt: 'Interior 2',
+      },
+      {
+        src: Loteamento3,
+        srcSet: `${Loteamento3} 1x, ${Loteamento3x2} 2x`,
+        alt: 'Interior 3',
+      },
+      {
+        src: Loteamento4,
+        srcSet: `${Loteamento4} 1x, ${Loteamento4x2} 2x`,
+        alt: 'Interior 4',
+      },
+      {
+        src: Loteamento5,
+        srcSet: `${Loteamento5} 1x, ${Loteamento5x2} 2x`,
+        alt: 'Interior 5',
+      }, 
+      {
+        src: Loteamento6,
+        srcSet: `${Loteamento6} 1x, ${Loteamento6x2} 2x`,
+        alt: 'Interior 6',
+      }, 
+      {
+        src: Loteamento7,
+        srcSet: `${Loteamento7} 1x, ${Loteamento7x2} 2x`,
+        alt: 'Interior 7',
+      }, 
+      {
+        src: Loteamento8,
+        srcSet: `${Loteamento8} 1x, ${Loteamento8x2} 2x`,
+        alt: 'Interior 8',
+      },      
+    ],
+  },
   clients: {
-    title: 'Nossos Clientes Falam Por Nós',
+    title: 'Nossos clientes falam por nós',
     //text: 'O que os clientes falam sobre nós',
     comments: [
       {

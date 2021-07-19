@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <html lang="pt-BR">
         <Head>
           {this.props.styleTags}
           <link rel="icon" href="/icons/icon-48x48.png?v=fe808657b067201fdd8e22e0c3a39714" />

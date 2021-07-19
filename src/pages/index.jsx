@@ -5,6 +5,12 @@ import Head from 'next/head';
 import Sticky from 'react-sticky-el';
 import absoluteUrl from 'next-absolute-url';
 
+// import Carousel from 'react-multi-carousel';
+// import '@pagerland/cli/village/node_modules/react-multi-carousel/lib/styles.css';
+//import 'react-multi-carousel/lib/styles.css';
+//import imageCards from '@pagerland/cli/village/packages/themes/src/MobileApp/containers/Carousel/imageCards';
+
+
 import Theme, { theme } from '@pagerland/themes/src/MobileApp';
 import {
   Navbar,
@@ -13,10 +19,12 @@ import {
   Welcome,
   About,
   Features,
-  Screenshots,
   Clients,
   Pricing,
-  Newsletter,  
+  Newsletter, 
+  Screenshots,
+  ImagemLoteamento,
+  Contact
 } from '@pagerland/themes/src/MobileApp/containers';
 import Feature from '@pagerland/themes/src/MobileApp/containers/Features/Feature';
 import Liquid from '@pagerland/themes/src/MobileApp/components/Liquids/C';
@@ -31,7 +39,10 @@ import phoneImg2x from '@pagerland/themes/src/MobileApp/assets/loteamento/elemen
 
 import SEO from '../components/SEO';
 
+
+
 const Landing1 = ({ url }) => (
+  
   <Theme>
     <Head>
       <link href={theme.typography.googleFont} rel="stylesheet" />
@@ -112,6 +123,11 @@ const Landing1 = ({ url }) => (
         gridGap: '90px',
       }}
     />
+   
+
+    {/* <ImagemLoteamento />      */}
+    {/* <CarouselImage name="carousel" /> */}
+
     <Features
       name="features"
       features={[
@@ -299,7 +315,6 @@ const Landing1 = ({ url }) => (
     />
 
     <Newsletter name="newsletter" />
-    {/* <Contact /> */}
     <Footer />
     <Copyright />
   </Theme>
