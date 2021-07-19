@@ -55,8 +55,8 @@ import Loteamento7 from './assets/loteamento/interior/FOTO-7.png';
 import Loteamento7x2 from './assets/loteamento/interior/FOTO-7.png';
 import Loteamento8 from './assets/loteamento/interior/FOTO-8.png';
 import Loteamento8x2 from './assets/loteamento/interior/FOTO-8.png';
-import Loteamento9 from './assets/loteamento/interior/folder3.png';
-import Loteamento9x2 from './assets/loteamento/interior/folder3.png';
+import Loteamento9 from './assets/loteamento/interior/folder3.jpg';
+import Loteamento9x2 from './assets/loteamento/interior/folder3.jpg';
 
 import male from './assets/clients/photo-male.jpg';
 import malex2 from './assets/clients/photo-male@2x.jpg';
