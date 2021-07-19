@@ -55,6 +55,8 @@ import Loteamento7 from './assets/loteamento/interior/FOTO-7.png';
 import Loteamento7x2 from './assets/loteamento/interior/FOTO-7.png';
 import Loteamento8 from './assets/loteamento/interior/FOTO-8.png';
 import Loteamento8x2 from './assets/loteamento/interior/FOTO-8.png';
+import Loteamento9 from './assets/loteamento/interior/folder3.png';
+import Loteamento9x2 from './assets/loteamento/interior/folder3.png';
 
 import male from './assets/clients/photo-male.jpg';
 import malex2 from './assets/clients/photo-male@2x.jpg';
@@ -411,6 +413,11 @@ export default {
         src: Loteamento8,
         srcSet: `${Loteamento8} 1x, ${Loteamento8x2} 2x`,
         alt: 'Interior 8',
+      },  
+      {
+        src: Loteamento9,
+        srcSet: `${Loteamento9} 1x, ${Loteamento9x2} 2x`,
+        alt: 'Interior 9',
       },      
     ],
   },

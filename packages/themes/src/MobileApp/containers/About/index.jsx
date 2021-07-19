@@ -15,8 +15,8 @@ import data from '../../data';
 import Contact from '../Contact';
 //import Button from '@pagerland/common/src/components/Button';
 
-import Folder from '@pagerland/cli/village/public/folder3.jpg';
-import { ButtonFolder, StyledLink } from './styled.components';
+// import Folder from '@pagerland/cli/village/public/folder3.jpg';
+// import { ButtonFolder, StyledLink } from './styled.components';
 
 //const uriDownload = 'https://www.transfernow.net/dl/20210719eOWAiDcJ';
 //const uriDownload = '/_next/static/images/folder3-3760a5e2196c0edc2593e9cdc7f582ce.jpg';
@@ -35,8 +35,8 @@ const About = ({
   FeaturesGridProps,
   CardProps,
 }) => {
-  const [download, setDownload] = useState('');
-  const [count, setCount] = useState(0);
+  // const [download, setDownload] = useState('');
+  // const [count, setCount] = useState(0);
   return(
     <Box name={name} {...WrapperProps}>
     <Container style={{marginBottom: 100}}>
@@ -78,10 +78,11 @@ const About = ({
       
     </Container >
    
-    <StyledLink href={Folder}>{name}</StyledLink>
+    {/* <StyledLink href={Folder}>{name}</StyledLink>
    
     <ButtonFolder href={Folder} download={Folder} >
-      Olá
+      Olá    
+    </ButtonFolder> */}
     {/* <Link underline='none' href={Folder} download={Folder} target="_blank" 
       style={{
         background: '#152144', padding: '38px 78px', fontSize: '32px', border: 'none',
@@ -99,7 +100,6 @@ const About = ({
     {/* <Link underline='none' href={Folder} download={Folder} target="_blank">
         Folder
     </Link> */}
-    </ButtonFolder>
    
   </Box>
   )
