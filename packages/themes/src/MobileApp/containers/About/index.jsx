@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
+//import Link from 'next/link';
 
 import Box from '@pagerland/common/src/components/Box';
 import Icon from '@pagerland/common/src/components/Icon';
 import Grid from '@pagerland/common/src/components/Grid';
+//import Link from '@pagerland/common/src/components/Link';
 import Container from '@pagerland/common/src/components/Container';
 import Typography from '@pagerland/common/src/components/Typography';
 import Card from '@pagerland/common/src/components/Card';
 
 import data from '../../data';
 import Contact from '../Contact';
-import Button from '@pagerland/common/src/components/Button';
+//import Button from '@pagerland/common/src/components/Button';
 
 import Folder from '@pagerland/cli/village/public/folder3.jpg';
+import { ButtonFolder, StyledLink } from './styled.components';
 
 //const uriDownload = 'https://www.transfernow.net/dl/20210719eOWAiDcJ';
-const uriDownload = '/_next/static/images/folder3-3760a5e2196c0edc2593e9cdc7f582ce.jpg';
+//const uriDownload = '/_next/static/images/folder3-3760a5e2196c0edc2593e9cdc7f582ce.jpg';
+//const uriDownload = '@pagerland/cli/village/public/folder3.jpg';
+//const uriDownloadPDF = '@pagerland/cli/village/public/folder.pdf';
 
 const About = ({
   name,
@@ -34,7 +39,7 @@ const About = ({
   const [count, setCount] = useState(0);
   return(
     <Box name={name} {...WrapperProps}>
-    <Container>
+    <Container style={{marginBottom: 100}}>
       <Box {...CaptionProps}>
         <Fade bottom cascade duration={600}>
           <Typography {...TitleProps}>{title}</Typography>
@@ -53,9 +58,9 @@ const About = ({
             </Card>
           </Fade>
         ))}
-         {/* <a variant="primary" href={Folder} download={Folder} style={{alignItens: 'center', textAlign: 'center'}} >Download Text</a> */}
          
-         <Button
+         {/* <Link to={`https://localhost:3000`+Folder} href={Folder} target="_blank" download={Folder}>Download</Link> */}
+         {/*<Button
           variant="primary" 
           style={{alignItens: 'center', textAlign: 'center'}} 
           onClick={() => {
@@ -66,11 +71,35 @@ const About = ({
           >
             Baixe nosso folder
          </Button>
+          {download && <iframe src={download } > </iframe> }  */}
          {/* {download && <a href={Folder} download={Folder} > </a> } */}
-          {download && <iframe src={download+'?c='+count } style={{display: 'none'}}> </iframe> } 
          {/* +'?c='+count style={{display: 'none'}} */}
       </Grid>
-    </Container>
+      
+    </Container >
+   
+    <StyledLink href={Folder}>{name}</StyledLink>
+   
+    <ButtonFolder href={Folder} download={Folder} >
+      Olá
+    {/* <Link underline='none' href={Folder} download={Folder} target="_blank" 
+      style={{
+        background: '#152144', padding: '38px 78px', fontSize: '32px', border: 'none',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        color: '#FFFFFF',
+        borderRadius: '42px',
+        alignItems: 'center',
+        textAlign: 'center',
+        // marginLeft: 0,
+      }}            
+      >
+        Folder
+    </Link> */}
+    {/* <Link underline='none' href={Folder} download={Folder} target="_blank">
+        Folder
+    </Link> */}
+    </ButtonFolder>
    
   </Box>
   )
