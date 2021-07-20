@@ -171,11 +171,11 @@ Contact.defaultProps = {
   ImgProps: {
     width: {
       _: '480px !important',
-      lg: '780px !important',
+      lg: '660px !important',
     },
     mb: 40,
     mx: -20,
-    borderRadius: 68,
+    borderRadius: 42,
   },
   ...data.imagemLoteamento,
   ImgWrapperProps: {
