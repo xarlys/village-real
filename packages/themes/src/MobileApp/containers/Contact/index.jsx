@@ -9,14 +9,16 @@ import Typography from '@pagerland/common/src/components/Typography';
 import { Img, ImgSlider, MapaImg } from './styled.components';
 
 import FotoMapa from '../../assets/mapa.png';
-
-
-
 import data from '../../data';
+
+
+import ReactPlayer from 'react-player'
+//import video from './village-video.mp4';
 
 const Contact = ({
   WrapperProps,
   CaptionProps,
+  VideoProps,
   TitleProps,
   SliderProps,
   TextProps,
@@ -34,18 +36,14 @@ const Contact = ({
   
     <Box {...WrapperProps} name={name}>
       <Container>
-        <Box {...CaptionProps}>
-          <Fade cascade bottom duration={600}>
-            <Typography {...TitleProps}>{title}</Typography>
-            <Typography {...TextProps}>{text}</Typography>
-  
-            
-          </Fade>
+        <Box {...CaptionProps}>          
+          <ReactPlayer width={'100%'} height={'100%'} style={{borderRadius: '420px'}} playing controls={false} loop={true} url={['./village-video.mp4']} volume={1} muted={false} {...VideoProps}/>
         </Box>
         
       </Container>
         
       <Fade duration={600}>
+
         <ImgSlider {...SliderProps} 
           autoPlaySpeed={5000}
           autoPlay
@@ -59,6 +57,10 @@ const Contact = ({
         </ImgSlider>  
           
       </Fade>
+
+      {/* <ReactPlayer controls={false} playing url={['./village-video.mp4']} muted={false} /> */}
+
+      {/* <video src={video} /> */}
       {/* <Box {...ImgWrapperProps}>
         <Fade duration={600} delay={100} style={{ textAlign: 'center', alignItems:'center', alignContent:'center'}}>
           <MapaImg style={{textAlign: 'center', alignItems:'center', alignContent:'center'}} alt="Mapa do Loteamento" {...ImgPropsMapa} />
@@ -84,6 +86,8 @@ Contact.propTypes = {
    * @See @pagerland/common/src/components/Box
    */
   CaptionProps: PropTypes.object,
+
+  VideoProps: PropTypes.object,
   /**
    * Props of slider component
    * @See @pagerland/common/src/components/Slider
@@ -139,9 +143,22 @@ Contact.defaultProps = {
       _: 'left',
       lg: 'center',
     },
-    mb: 0,
+    mb: 40,
     maxWidth: 770,
     mx: 'auto',
+  },
+  VideoProps: {
+    alignItens: {
+      _: 'left',
+      lg: 'center',
+    },
+    width: '100%',
+    height: '100%',
+    maxWidth: 410,
+    mx: 'auto',  
+    mb: 20,
+    borderRadius: 80, 
+
   },
   TitleProps: {
     as: 'h2',
@@ -178,26 +195,26 @@ Contact.defaultProps = {
     borderRadius: 42,
   },
   ...data.imagemLoteamento,
-  ImgWrapperProps: {
-    position: 'relative',
-    zIndex: -1,
-    mt: 10,
-    mb: -60,
-    // top: -0,
-    //left: 335,
-    ml: 420,
-  },
-  ImgPropsMapa: {
-    src: FotoMapa,
-    srcSet: `${FotoMapa} 1x, ${FotoMapa} 2x`,
-    alt: 'Mapa do Loteamento',
-    width: '60%',
-    height: '80%',
-    borderRadius: '60px',
-    alignItens: 'center',
-    //maxWidth:'80%',
+  // ImgWrapperProps: {
+  //   position: 'relative',
+  //   zIndex: -1,
+  //   mt: 10,
+  //   mb: -60,
+  //   // top: -0,
+  //   //left: 335,
+  //   ml: 420,
+  // },
+  // ImgPropsMapa: {
+  //   src: FotoMapa,
+  //   srcSet: `${FotoMapa} 1x, ${FotoMapa} 2x`,
+  //   alt: 'Mapa do Loteamento',
+  //   width: '60%',
+  //   height: '80%',
+  //   borderRadius: '60px',
+  //   alignItens: 'center',
+  //   //maxWidth:'80%',
 
-  },
+  // },
 
 };
 

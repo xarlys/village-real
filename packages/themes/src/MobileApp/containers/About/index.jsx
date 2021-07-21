@@ -194,7 +194,7 @@ About.defaultProps = {
   WrapperProps: {
     py: {
       _: 30,
-      lg: 60,
+      lg: 20,
     },
   },
   CaptionProps: {
@@ -206,7 +206,7 @@ About.defaultProps = {
     },
     mb: {
       _: 4,
-      lg: 5,
+      lg: 4,
     },
   },
   TitleProps: {
@@ -217,6 +217,10 @@ About.defaultProps = {
   TextProps: {
     variant: 'body1',
     color: 'gray.1',
+    ml: 10,
+    textAlign: {
+      md: 'justify',
+    },
   },
   FeaturesGridProps: {
     my: 3,

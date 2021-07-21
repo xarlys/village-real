@@ -233,7 +233,7 @@ Feature.defaultProps = {
   ContainerProps: {
     py: {
       _: 30,
-      lg: 60,
+      lg: -60,
     },
   },
   GridProps: {

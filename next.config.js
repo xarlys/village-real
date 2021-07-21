@@ -22,3 +22,7 @@ module.exports = withPlugins(
     },
   }),
 );
+
+// const withVideos = require('next-videos');
+
+// module.exports = withVideos();
