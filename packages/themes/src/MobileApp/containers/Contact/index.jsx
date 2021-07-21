@@ -37,7 +37,7 @@ const Contact = ({
     <Box {...WrapperProps} name={name}>
       <Container>
         <Box {...CaptionProps}>          
-          <ReactPlayer width={'100%'} height={'100%'} style={{borderRadius: '420px'}} playing controls={false} loop={true} url={['./village-video.mp4']} volume={1} muted={false} {...VideoProps}/>
+          <ReactPlayer width={'100%'} height={'100%'} style={{borderRadius: '420px'}} playing controls={true} loop={true} url={['./village-video.mp4']} volume={1} muted={false} {...VideoProps}/>
         </Box>
         
       </Container>
